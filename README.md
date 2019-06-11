@@ -1,4 +1,4 @@
-# vue-requ
+# S&I Request with VueJs
 
 ## Project setup
 ```

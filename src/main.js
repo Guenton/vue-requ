@@ -24,4 +24,4 @@ Vue.use(VueAxios, axios)
 new Vue({
   router,
   render: h => h(core)
-}).$mount('#Core')
+}).$mount("#Core")

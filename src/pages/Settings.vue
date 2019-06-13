@@ -1,7 +1,9 @@
 <template>
   <div class="settings-wallpaper">
     <Topnav :barType="barType"/>
-    <router-view />
+    <transition name="fade" mode="out-in" appear>
+      <router-view/>
+    </transition>
   </div>
 </template>
 

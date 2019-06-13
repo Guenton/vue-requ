@@ -1,7 +1,9 @@
 <template>
   <div class="people-wallpaper">
     <Topnav :barType="barType"/>
-    <router-view />
+    <transition name="fade" mode="out-in" appear>
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -29,7 +31,7 @@ export default {
   top: 0;
   overflow: auto;
   position: fixed;
-  background-image: linear-gradient(to bottom right, white, midnightblue);
+  background-image: linear-gradient(to bottom right, white, #1f70a7);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

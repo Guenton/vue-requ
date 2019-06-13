@@ -1,6 +1,6 @@
 <template>
   <div id="Core">
-    <router-view></router-view>
+    <router-view />
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 // import sessionRedirectHandler from "./components/js/session-isAuth";
 
 export default {
-  name: "Core",
+  name: "core",
   // created() {
   //   if (sessionRedirectHandler()) {
   //     this.$router.push("/main");

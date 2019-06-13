@@ -1,29 +1,35 @@
 <template>
-  <div class="main-wallpaper">
-    <TopNav />
+  <div class="people-wallpaper">
+    <Topnav :barType="barType"/>
+    <router-view />
   </div>
 </template>
 
 <script>
-import TopNav from "../components/topnav/TopNav"
+import Topnav from "../components/topnav/Topnav"
 
 export default {
-  name: "MainCore",
+  name: "People",
+  data() {
+    return {
+      barType: "people"
+    }
+  },
   components: {
-    TopNav
+    Topnav
   }
 }
 </script>
 
 <style>
-.main-wallpaper {
+.people-wallpaper {
   height: 100%;
   width: 100%;
   left: 0;
   top: 0;
   overflow: auto;
   position: fixed;
-  background-image: url("../img/main-wallpaper.jpg");
+  background-image: linear-gradient(to bottom right, white, midnightblue);
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

@@ -1,56 +1,70 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
-      <b-navbar-brand href="#"><HomeIcon /></b-navbar-brand>
-
+      <b-navbar-brand><router-link to="/main"><HomeIcon /></router-link></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item href="#">Requests</b-nav-item>
-          <b-nav-item href="#">Cases</b-nav-item>
-          <b-nav-item href="#">Activity</b-nav-item>
-          <b-nav-item href="#">Screening</b-nav-item>
-        </b-navbar-nav>
-        <!-- TopNav Right Side -->
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item-dropdown>
-            <template slot="button-content"><AccountBoxIcon /></template>
-            <b-dropdown-item href="#">Agents</b-dropdown-item>
-            <b-dropdown-item href="#">Subjects</b-dropdown-item>
-          </b-nav-item-dropdown>
+        <!-- Populate Links depending on current screen -->
+        <template v-if="isMain()">
+          <topnavLinksMain />
+        </template>
+        <template v-if="isPeople()">
+          <topnavLinksPeople />
+        </template>
+        <template v-if="isSettings()">
+          <topnavLinksSettings />
+        </template>
+        <!-- TopNav Right Side Elements -->
+        <topnavRight />
+      </b-collapse>     
 
-          <b-nav-item-dropdown right>
-            <!-- Using 'button-content' slot -->
-            <template slot="button-content"><SettingsIcon /></template>
-            <b-dropdown-item href="#">Settings</b-dropdown-item>
-            <b-dropdown-item href="#">Rights</b-dropdown-item>
-            <b-dropdown-divider></b-dropdown-divider>
-            <b-dropdown-item href="#">Sign Out</b-dropdown-item>
-          </b-nav-item-dropdown>
-
-          <b-nav-form>
-            <b-form-input size="sm" class="mr-sm-2" placeholder="Search"></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-          </b-nav-form>
-
-        </b-navbar-nav>
-      </b-collapse>
     </b-navbar>
   </div>
 </template>
 
 <script>
-import SettingsIcon from "vue-material-design-icons/Settings"
 import HomeIcon from "vue-material-design-icons/Home"
-import AccountBoxIcon from "vue-material-design-icons/AccountBox"
+
+import topnavLinksPeople from "./topnav-links-people"
+import topnavLinksSettings from "./topnav-links-settings"
+import topnavLinksMain from "./topnav-links-main"
+import topnavRight from "./topnav-right"
+
 export default {
-  name: "TopNav",
+  name: "Topnav",
+  props: [ "barType" ],
   components: {
-    SettingsIcon,
+    topnavLinksPeople,
+    topnavLinksSettings,
+    topnavLinksMain,
+    topnavRight,
     HomeIcon,
-    AccountBoxIcon
+  },
+  methods: {
+    isMain() { 
+      if (this.barType === "main") { return true } 
+      else { return false } 
+    },
+    isPeople() { 
+      if (this.barType === "people") { return true } 
+      else { return false } 
+     },
+    isSettings() { 
+      if (this.barType === "settings") { return true } 
+      else { return false } 
+    },
   }
 }
 </script>
 
+<style>
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+</style>

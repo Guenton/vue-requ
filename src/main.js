@@ -1,6 +1,7 @@
-// Expansion libraries
+// Plugin libraries
 import Vue from 'vue'
 import VueRouter from "vue-router"
+import Vuex from "vuex"
 import BootstrapVue from "bootstrap-vue"
 import axios from "axios"
 import VueAxios from "vue-axios"
@@ -11,30 +12,16 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 import "vue-material-design-icons/styles.css"
 
 // Application Cores
-import Core from "./Core.vue"
-import LoginCore from "./core/LoginCore.vue"
-import MainCore from "./core/MainCore.vue"
+import core from "./Core"
+import router from "./Router"
 
 Vue.config.productionTip = false
 Vue.use(VueRouter)
+Vue.use(Vuex)
 Vue.use(BootstrapVue)
 Vue.use(VueAxios, axios)
 
-// Array of Core routes
-const routes = [
-  { path: "/login", component: LoginCore },
-  { 
-    path: "/main",
-    component: MainCore
-  },
-];
-
-const router = new VueRouter({
-  routes,
-  mode: "history",
-});
-
 new Vue({
   router,
-  render: h => h(Core)
+  render: h => h(core)
 }).$mount('#Core')

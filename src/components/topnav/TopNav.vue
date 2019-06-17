@@ -1,6 +1,6 @@
 <template>
   <div class="shadow">
-    <b-navbar toggleable="lg" type="dark" variant="dark">
+    <b-navbar toggleable="lg" type="light" variant="light">
       <b-navbar-brand><router-link to="/main"><HomeIcon /></router-link></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 

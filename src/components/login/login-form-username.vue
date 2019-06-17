@@ -3,7 +3,7 @@
     <b-col xl="10">
       <b-input-group>
         <b-input-group-prepend is-text class="d-none d-md-inline-flex">
-          <account-icon />
+          <font-awesome-icon icon="user"/>
         </b-input-group-prepend>
         <b-form-input 
           :value="username" 
@@ -17,11 +17,9 @@
 </template>
 
 <script>
-import AccountIcon from "vue-material-design-icons/Account"
 export default {
   name: "loginFormUsername",
   props: [ "username" ],
-  components: { AccountIcon },
   methods: {
     pushToParent(textInput) {
       this.$emit("typedUsername", textInput)

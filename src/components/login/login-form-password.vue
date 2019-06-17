@@ -3,7 +3,7 @@
     <b-col xl="10">
       <b-input-group>
         <b-input-group-prepend is-text class="d-none d-md-inline-flex">
-          <lock-icon />
+          <font-awesome-icon icon="key"/>
         </b-input-group-prepend>
         <b-form-input 
           :value="password" 
@@ -17,11 +17,9 @@
 </template>
 
 <script>
-import LockIcon from "vue-material-design-icons/Lock"
 export default {
   name: "loginFormUsername",
   props: [ "password" ],
-  components: { LockIcon },
   methods: {
     pushToParent(textInput) {
       this.$emit("typedPassword", textInput)

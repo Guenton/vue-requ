@@ -1,7 +1,7 @@
 <template>
   <div class="shadow">
     <b-navbar toggleable="lg" type="light" variant="light">
-      <b-navbar-brand><router-link to="/main"><HomeIcon /></router-link></b-navbar-brand>
+      <b-navbar-brand><router-link to="/main"><font-awesome-icon icon="home" size="lg"/></router-link></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
@@ -24,8 +24,6 @@
 </template>
 
 <script>
-import HomeIcon from "vue-material-design-icons/Home"
-
 import topnavLinksPeople from "./topnav-links-people"
 import topnavLinksSettings from "./topnav-links-settings"
 import topnavLinksMain from "./topnav-links-main"
@@ -38,8 +36,7 @@ export default {
     topnavLinksPeople,
     topnavLinksSettings,
     topnavLinksMain,
-    topnavRight,
-    HomeIcon,
+    topnavRight
   },
   methods: {
     isMain() { 

@@ -1,9 +1,11 @@
 <template>
   <b-navbar-nav>
-    <b-button v-if="isAgentPage()"><router-link :to=agentPath><font-awesome-icon icon="user-tie"/> Agents</router-link></b-button>
+    <b-button variant="outline-success" v-if="isAgentPage()"><router-link :to=agentPath><font-awesome-icon icon="user-tie"/> Agents</router-link></b-button>
     <b-nav-item v-else><router-link :to=agentPath><font-awesome-icon icon="user-tie"/> Agents</router-link></b-nav-item>
-    <b-button v-if="isSubjectPage()"><router-link :to=subjectPath><font-awesome-icon icon="user"/> Subjects</router-link></b-button>
+
+    <b-button variant="outline-success" v-if="isSubjectPage()"><router-link :to=subjectPath><font-awesome-icon icon="user"/> Subjects</router-link></b-button>
     <b-nav-item v-else><router-link :to=subjectPath><font-awesome-icon icon="user"/> Subjects</router-link></b-nav-item>
+    
   </b-navbar-nav>
 </template>
 

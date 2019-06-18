@@ -73,6 +73,7 @@
       },
       responseHandler(res) {
         if (res.valid) {
+          this.$store.commit("newJwt", res.jwt)
           this.$router.push("/main");
         } else {
           this.warningMsg = res.msg;

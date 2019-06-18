@@ -1,1 +1,1 @@
-export const loginAPI = "http://skaseclog01:670/api/auth/auth.php";
+export const loginAPI = "./server/api/auth/auth.php";

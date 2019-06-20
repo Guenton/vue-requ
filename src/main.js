@@ -14,13 +14,15 @@ import { library } from "@fortawesome/fontawesome-svg-core"
 import { FontAwesomeIcon, FontAwesomeLayers, FontAwesomeLayersText } from "@fortawesome/vue-fontawesome"
 import { 
   faHome, faUsers, faUserTie, faUser, faCog, faUserCog, faPowerOff, faClipboardList,
-  faBriefcase, faUserTag, faFileAlt, faKey
+  faBriefcase, faUserTag, faFileAlt, faKey, faUserPlus, faUserEdit, faUserMinus,
+  faUserSecret
 } from "@fortawesome/free-solid-svg-icons"
 
 // Font Awesome Global Registration
 library.add(
   faHome, faUsers, faUserTie, faUser, faCog, faUserCog, faPowerOff, faClipboardList,
-  faBriefcase, faUserTag, faFileAlt, faKey
+  faBriefcase, faUserTag, faFileAlt, faKey, faUserPlus, faUserEdit, faUserMinus,
+  faUserSecret
 )
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('font-awesome-layers', FontAwesomeLayers)

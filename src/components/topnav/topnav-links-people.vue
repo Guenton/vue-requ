@@ -14,17 +14,17 @@ export default {
   name: "topnavLinksPeople",
   data() {
     return {
-      agentPath: "/people/agent",
-      subjectPath: "/people/subject",
+      agentPath: "/people/agent/home",
+      subjectPath: "/people/subject/home",
     }
   },
   methods: {
     isAgentPage() {
-      if (this.$route.path === this.agentPath) { return true }
+      if (this.$route.path.startsWith("/people/agent")) { return true }
       else { return false }
     },
     isSubjectPage() {
-      if (this.$route.path === this.subjectPath) { return true }
+      if (this.$route.path.startsWith("/people/subject")) { return true }
       else { return false }
     }
   }

@@ -6,7 +6,7 @@
           <b-col col sm="2" class="d-none d-md-block">
             <font-awesome-icon icon="power-off"/>
           </b-col>
-          <b-col>Submit</b-col>
+          <b-col>Login</b-col>
         </b-row>
       </b-button>
     </b-col>
@@ -16,7 +16,6 @@
 <script>
 export default {
   name: "loginFormSubmitButton",
-  props: [ "username" ],
   methods: {
     submitted() {
       this.$emit("submitted")

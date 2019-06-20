@@ -39,4 +39,7 @@ export default {
   z-index: -1;
   filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='../img/main-wallpaper.jpg', sizingMethod='scale');
 }
+.whiteshade {
+ background-color: rgba(255,255,255,0.9)
+}
 </style>

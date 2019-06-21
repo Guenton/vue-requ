@@ -7,6 +7,10 @@ Vue.use(VueRouter)
 import Login from "./pages/Login"
 import Main from "./pages/Main"
   import Request from "./pages/main/Request"
+    import requestHome from "./pages/main/request/request-home"
+    import requestAdd from "./pages/main/request/request-add"
+    import requestEdit from "./pages/main/request/request-edit"
+    import requestDelete from "./pages/main/request/request-delete"
   import Case from "./pages/main/Case"
   import Screening from "./pages/main/Screening"
   import Activity from "./pages/main/Activity"
@@ -34,7 +38,16 @@ const routes = [
     path: "/main",
     component: Main,
     children: [
-      { path: "request", component: Request },
+      { 
+        path: "request",
+        component: Request,
+        children: [
+          { path: "home", component: requestHome },
+          { path: "add", component: requestAdd },
+          { path: "edit", component: requestEdit },
+          { path: "delete", component: requestDelete }
+        ]
+      },
       { path: "case", component: Case },
       { path: "screening", component: Screening },
       { path: "activity", component: Activity },

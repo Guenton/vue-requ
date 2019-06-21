@@ -35,4 +35,7 @@ body {
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
+.whiteshade {
+ background-color: rgba(255,255,255,0.9)
+}
 </style>

@@ -1,0 +1,149 @@
+{
+  "ttlagent": 16,
+  "data": [
+    {
+      "userName": "kroonh",
+      "firstName": "Hendrik",
+      "lastName": "Kroon",
+      "domain": "cur",
+      "title": "Electronic Crime Investigator",
+      "authLevel": "CSO",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "teubenw",
+      "firstName": "Willem",
+      "lastName": "Teuben",
+      "domain": "cur",
+      "title": "Chief Security Officer",
+      "authLevel": "CSO",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "marthac",
+      "firstName": "Carlos",
+      "lastName": "Martha",
+      "domain": "cur",
+      "title": "Section Head Investigations",
+      "authLevel": "SHI",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "liberiad",
+      "firstName": "Dudley",
+      "lastName": "Liberia",
+      "domain": "cur",
+      "title": "Senior Investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "flandersj",
+      "firstName": "Julio",
+      "lastName": "Flanders",
+      "domain": "cur",
+      "title": "Investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "merced",
+      "firstName": "Dubberlysse",
+      "lastName": "Merce",
+      "domain": "cur",
+      "title": "Investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "AuditUser",
+      "firstName": "Audit",
+      "lastName": "User",
+      "domain": "cur",
+      "title": "Audit",
+      "authLevel": "ADT",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "winklaarsh",
+      "firstName": "Shaun",
+      "lastName": "Winklaar",
+      "domain": "aru",
+      "title": "Investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "prinsenk",
+      "firstName": "Kilian Leon Vince",
+      "lastName": "Prinsen",
+      "domain": "bon",
+      "title": "Investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "richardsonma",
+      "firstName": "Marlon",
+      "lastName": "Richardson",
+      "domain": "cur",
+      "title": "Deputy Chief Security Officer",
+      "authLevel": "CSO",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "WilsonE",
+      "firstName": "Elton",
+      "lastName": "Wilson",
+      "domain": "aru",
+      "title": "Security Manager",
+      "authLevel": "SCM",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "BrooksG",
+      "firstName": "Guenton",
+      "lastName": "Brooks",
+      "domain": "cur",
+      "title": "Investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "casiliow",
+      "firstName": "Winoca",
+      "lastName": "Casilio",
+      "domain": "cur",
+      "title": "Investigations Admin",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "VaningenJ",
+      "firstName": "Jos",
+      "lastName": "Van Ingen",
+      "domain": "sxm",
+      "title": "Security Manager",
+      "authLevel": "SCM",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "arrindellf",
+      "firstName": "Franklin",
+      "lastName": "Arrindell",
+      "domain": "sxm",
+      "title": "Investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    },
+    {
+      "userName": "CandelariaR",
+      "firstName": "Roderick",
+      "lastName": "Candelaria",
+      "domain": "cur",
+      "title": "investigator",
+      "authLevel": "INV",
+      "email": "hendrik.kroon@mcb-bank.com"
+    }
+  ]
+}

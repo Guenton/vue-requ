@@ -1,9 +1,25 @@
 <template>
   <b-nav justified tabs>
-    <b-nav-item class="rounded mx-1" :active="isHomePage()"><router-link :to=agentHomePath><font-awesome-icon icon="user-tie"/></router-link></b-nav-item>
-    <b-nav-item class="rounded mx-1" :active="isAddPage()"><router-link :to=agentAddPath><font-awesome-icon icon="user-plus"/></router-link></b-nav-item>
-    <b-nav-item class="rounded mx-1" :active="isEditPage()"><router-link :to=agentEditPath><font-awesome-icon icon="user-edit"/></router-link></b-nav-item>
-    <b-nav-item class="rounded mx-1" :active="isDeletePage()"><router-link :to=agentDeletePath><font-awesome-icon icon="user-minus"/></router-link></b-nav-item>
+    <b-nav-item class="rounded mx-1" :active="isHomePage()">
+      <router-link :class="{ 'text-success': isHomePage() }" :to=agentHomePath>
+        <font-awesome-icon icon="user-tie"/>
+      </router-link>
+    </b-nav-item>
+    <b-nav-item class="rounded mx-1" :active="isAddPage()">
+      <router-link :class="{ 'text-success': isAddPage() }" :to=agentAddPath>
+        <font-awesome-icon icon="user-plus"/>
+      </router-link>
+    </b-nav-item>
+    <b-nav-item class="rounded mx-1" :active="isEditPage()">
+      <router-link :class="{ 'text-success': isEditPage() }" :to=agentEditPath>
+        <font-awesome-icon icon="user-edit"/>
+      </router-link>
+    </b-nav-item>
+    <b-nav-item class="rounded mx-1" :active="isDeletePage()">
+      <router-link :class="{ 'text-success': isDeletePage() }" :to=agentDeletePath>
+        <font-awesome-icon icon="user-minus"/>
+      </router-link>
+    </b-nav-item>
   </b-nav>
 </template>
 

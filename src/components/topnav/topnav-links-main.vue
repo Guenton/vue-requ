@@ -20,7 +20,7 @@ export default {
   name: "topnavLinksMain",
   data() {
     return {
-      requestPath: "/main/request",
+      requestPath: "/main/request/home",
       casePath: "/main/case",
       screeningPath: "/main/screening",
       activityPath: "/main/activity",
@@ -28,19 +28,19 @@ export default {
   },
   methods: {
     isRequestPage() {
-      if (this.$route.path === this.requestPath) { return true }
+      if (this.$route.path.startsWith("/main/request")) { return true }
       else { return false }
     },
     isCasePage() {
-      if (this.$route.path === this.casePath) { return true }
+      if (this.$route.path.startsWith("/main/case")) { return true }
       else { return false }
     },
     isScreeningPage() {
-      if (this.$route.path === this.screeningPath) { return true }
+      if (this.$route.path.startsWith("/main/screening")) { return true }
       else { return false }
     },
     isActivityPage() {
-      if (this.$route.path === this.activityPath) { return true }
+      if (this.$route.path.startsWith("/main/activity")) { return true }
       else { return false }
     }
   }

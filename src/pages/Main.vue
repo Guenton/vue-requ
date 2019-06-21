@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import Topnav from "../components/topnav/Topnav"
+import Topnav from "../components/topnav/TopNav"
 
 export default {
   name: "Main",

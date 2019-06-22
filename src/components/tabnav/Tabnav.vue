@@ -5,10 +5,7 @@
         <template v-if="isHome()"><tabnavHome :section="tabType"/></template>
       </transition>
       <transition name="fade" mode="out-in" appear>
-        <template v-if="isAgent()"><tabnavAgent/></template>
-      </transition>
-      <transition name="fade" mode="out-in" appear>
-        <template v-if="isSubject()"><tabnavSubject/></template>
+        <template v-if="isPeople()"><tabnavPeople :section="tabType"/></template>
       </transition>
     </b-navbar>
   </div>
@@ -16,26 +13,16 @@
 
 <script>
 import tabnavHome from "./tabnav-home"
-import tabnavAgent from "./tabnav-agent"
-import tabnavSubject from "./tabnav-subject"
+import tabnavPeople from "./tabnav-people"
 
 export default {
   name: "Tabnav",
   props: [ "tabType" ],
   components: {
     tabnavHome,
-    tabnavAgent,
-    tabnavSubject
+    tabnavPeople
   },
   methods: {
-    isAgent() { 
-      if (this.tabType === "agent") { return true } 
-      else { return false } 
-    },
-    isSubject() { 
-      if (this.tabType === "subject") { return true } 
-      else { return false } 
-    },
     isHome() {
       if 
       (
@@ -45,7 +32,15 @@ export default {
         this.tabType === "activity"
       ) 
       { return true } else { return false } 
-    }
+    },
+    isPeople() {
+      if 
+      (
+        this.tabType === "agent" || 
+        this.tabType === "subject"
+      ) 
+      { return true } else { return false } 
+    },
   }
 }
 </script>

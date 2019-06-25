@@ -21,9 +21,9 @@ export default {
   data() {
     return {
       requestPath: "/main/request/home",
-      casePath: "/main/case",
-      screeningPath: "/main/screening",
-      activityPath: "/main/activity",
+      casePath: "/main/case/home",
+      screeningPath: "/main/screening/home",
+      activityPath: "/main/activity/home",
     }
   },
   methods: {

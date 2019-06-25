@@ -7,11 +7,11 @@
 <script>
 import mainHeader from "../../../components/header/main-header"
 export default {
-  name: "requestHome",
+  name: "activityHome",
   data() {
     return {
-      headerIcon: "clipboard-list",
-      headerText: "S&I Request Management Section",
+      headerIcon: "file-alt",
+      headerText: "S&I Activity Management Section",
     }
   },
   components: {

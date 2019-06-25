@@ -27,8 +27,8 @@ export default {
       if 
       (
         this.tabType === "request" || 
-        this.tabType === "cases" || 
-        this.tabType === "secreening" || 
+        this.tabType === "case" || 
+        this.tabType === "screening" || 
         this.tabType === "activity"
       ) 
       { return true } else { return false } 

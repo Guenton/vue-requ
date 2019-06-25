@@ -19,6 +19,9 @@ export default {
   },
   components: {
     Topnav
+  },
+  mounted() {
+    this.$router.replace("/main/home")
   }
 }
 </script>

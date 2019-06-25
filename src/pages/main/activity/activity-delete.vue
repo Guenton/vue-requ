@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <mainHeader :icon="headerIcon" :text="headerText"/>
-  </div>
+  <mainHeader :icon="headerIcon" :text="headerText"/>
 </template>
 
 <script>
 import mainHeader from "../../../components/header/main-header"
 export default {
-  name: "requestHome",
+  name: "activityDelete",
   data() {
     return {
-      headerIcon: "clipboard-list",
-      headerText: "S&I Request Management Section",
+      headerIcon: "trash",
+      headerText: "Select Activities to submitted for deletion"
     }
   },
   components: {

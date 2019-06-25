@@ -1,10 +1,20 @@
 <template>
-  <h1>Agent Add Section</h1>
+  <mainHeader :icon="headerIcon" :text="headerText"/>
 </template>
 
 <script>
+import mainHeader from "../../../components/header/main-header"
 export default {
-  name: "agentAdd"
+  name: "agentAdd",
+  data() {
+    return {
+      headerIcon: "user-plus",
+      headerText: "Submit new Agent"
+    }
+  },
+  components: {
+    mainHeader
+  }
 }
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="shadow">
     <b-navbar toggleable="lg" type="light" variant="light">
-      <b-navbar-brand><router-link to="/main"><font-awesome-icon icon="home" size="lg"/></router-link></b-navbar-brand>
+      <b-navbar-brand><router-link to="/main/home"><font-awesome-icon icon="home" size="lg"/></router-link></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>

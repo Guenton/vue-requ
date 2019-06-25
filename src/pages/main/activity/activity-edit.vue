@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <mainHeader :icon="headerIcon" :text="headerText"/>
-  </div>
+  <mainHeader :icon="headerIcon" :text="headerText"/>
 </template>
 
 <script>
 import mainHeader from "../../../components/header/main-header"
 export default {
-  name: "requestHome",
+  name: "activityEdit",
   data() {
     return {
-      headerIcon: "clipboard-list",
-      headerText: "S&I Request Management Section",
+      headerIcon: "edit",
+      headerText: "Select Activity to be Edited"
     }
   },
   components: {

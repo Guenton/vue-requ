@@ -3,7 +3,7 @@
     <transition name="fade" mode="out-in" appear>
       <Tabnav :tabType="tabType"/>
     </transition>
-    <div class="whiteshade rounded border-left border-bottom">
+    <div>
       <transition name="fade" mode="out-in" appear>
         <router-view/>
       </transition>

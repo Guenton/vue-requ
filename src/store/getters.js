@@ -4,6 +4,12 @@ const getters = {
   },
   getJwt: state => {
     return state.jwt
+  },
+  getRequestAddFormTab: state => {
+    return state.request.addFormTab
+  },
+  getRequestAddFormStep: state => {
+    return state.request.addFormStep
   }
 }
 

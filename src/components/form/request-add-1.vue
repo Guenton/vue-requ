@@ -45,39 +45,14 @@
           </b-form-group>
         </b-col>
       </b-form-row>
-
-      <b-form-row>
-        <b-col cols="6">
-          <b-button-toolbar key-nav>
-            <b-button-group class="mx-1">
-              <b-button>&laquo;</b-button>
-              <b-button>&lsaquo;</b-button>
-            </b-button-group>
-            <b-button-group class="mx-1">
-              <b-button>Previous</b-button>
-              <b-button>Reset</b-button>
-              <b-button>Next</b-button>
-            </b-button-group>
-            <b-button-group class="mx-1">
-              <b-button>&rsaquo;</b-button>
-              <b-button>&raquo;</b-button>
-            </b-button-group>
-          </b-button-toolbar>
-        </b-col>
-      </b-form-row>
-
-      <b-form-row class="py-4">
-        <b-col>
-          <b-button block variant="danger">Reset entire form</b-button>
-        </b-col>
-      </b-form-row>
-      
+            
     </b-form>
     
   </b-container>
 </template>
 
 <script>
+
 export default {
   name: "requestAdd1",
   data() {

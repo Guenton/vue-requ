@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="whiteshade rounded shadow border-left border-bottom">
     <mainHeader :icon="headerIcon" :text="headerText"/>
   </div>
 </template>

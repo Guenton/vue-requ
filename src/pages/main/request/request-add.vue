@@ -6,7 +6,7 @@
     <b-container>
       <b-row>
         <b-col cols="12" class="pt-3">
-          <h2Header :text="h2Text"/>
+          <h2Header :text="header.h2Text"/>
         </b-col>
       </b-row>
       <b-row class="whiteshade rounded shadow py-2 mb-3">

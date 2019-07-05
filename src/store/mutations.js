@@ -1,9 +1,15 @@
 const mutations = {
-  increment (state) {
+  incZindex (state) {
     state.zIndex++
   },
-  newJwt (state, token) {
+  setJwt (state, token) {
     state.jwt = token
+  },
+  setRequestAddFormTab (state, tab) {
+    state.request.addFormTab = tab
+  },
+  setRequestAddFormStep (state, step) {
+    state.request.addFormStep = step
   }
 }
 

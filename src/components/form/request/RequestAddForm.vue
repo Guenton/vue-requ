@@ -31,8 +31,12 @@
 </template>
 
 <script>
-import Formtab from "./form-tab/Formtab"
+import Formtab from "../form-tab/Formtab"
 import requestAdd1 from "./request-add-1"
+import requestAdd2 from "./request-add-2"
+import requestAdd3 from "./request-add-3"
+import requestAdd4 from "./request-add-4"
+
 export default {
   name: "RequestAddForm",
   data() {
@@ -46,6 +50,9 @@ export default {
   },
   components: {
     requestAdd1,
+    requestAdd2,
+    requestAdd3,
+    requestAdd4,
     Formtab
   }
 }

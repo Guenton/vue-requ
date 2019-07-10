@@ -27,7 +27,7 @@
 <script>
 import mainHeader from "../../../components/header/main-header"
 import h2Header from "../../../components/header/h2-header"
-import RequestAddForm from "../../../components/form/RequestAddForm"
+import RequestAddForm from "../../../components/form//request/RequestAddForm"
 import StepProgress from "../../../components/progressbar/StepProgress"
 export default {
   name: "requestAdd",

@@ -46,8 +46,7 @@
         </b-col>
       </b-form-row>
             
-    </b-form>
-    
+    </b-form>  
   </b-container>
 </template>
 

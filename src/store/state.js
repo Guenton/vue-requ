@@ -2,20 +2,27 @@ const state = {
   zIndex: 0,
   jwt: null,
   request: {
-    addFormTab: null,
-    addFormStep: null,
+    addForm : {
+      tab: "General",
+      valCount: {
+        general: 0,
+        submitter: 0,
+        description: 0,
+        attach: 0,
+      }
+    }
   },
   case: {
     addFormTab: null,
-    addFormStep: null,
+    addFormValidationCount: 0,
   },
   screening: {
     addFormTab: null,
-    addFormStep: null,
+    addFormValidationCount: 0,
   },
   activity: {
     addFormTab: null,
-    addFormStep: null,
+    addFormValidationCount: 0,
   }
 }
 

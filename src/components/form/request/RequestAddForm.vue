@@ -3,21 +3,32 @@
     <Formtab :tabType="tabType"/>
     <div class="bg-white rounded shadow">
       <b-container>
-
-        <!-- Form Steps -->
         <b-row>
-          <b-col cols="12" class="pt-3">
-            <requestAdd1/>
+          <!-- Back Button -->
+          <b-col align-self="center" cols="1" class="p-3 d-none d-md-block">
+            <h1 
+              v-show="!isGeneral()" 
+              :class="{ 'text-secondary': isGeneral(), 'text-primary': !isGeneral() }"
+              class="cMouse"
+            ><font-awesome-icon icon="arrow-alt-circle-left"/></h1>
           </b-col>
-        </b-row>
-
-        <!-- Form Navigation Buttons -->
-        <b-row>
-          <b-col>
-
+          <!-- Form Pages -->
+          <b-col cols="12" md="10" class="pt-3">
+            <transition name="fade" mode="out-in" appear>
+              <component :is="currentSubForm()" />
+            </transition>
           </b-col>
-        </b-row>
 
+          <!-- Forward Button -->
+          <b-col align-self="center" cols="1" class="p-3 d-none d-md-block">
+            <h1 
+              v-show="!isAttach()" 
+              :class="{ 'text-secondary': !validGeneral(), 'text-primary': validGeneral() }"
+              class="cMouse"
+            ><font-awesome-icon icon="arrow-alt-circle-right"/></h1>
+          </b-col>
+
+        </b-row>
         <!-- Reset Entire Form -->
         <b-row align-h="end" class="py-3">
           <b-col cols="2">
@@ -32,10 +43,10 @@
 
 <script>
 import Formtab from "../form-tab/Formtab"
-import requestAdd1 from "./request-add-1"
-import requestAdd2 from "./request-add-2"
-import requestAdd3 from "./request-add-3"
-import requestAdd4 from "./request-add-4"
+import requestAddGeneral from "./request-add-general"
+import requestAddSubmitter from "./request-add-submitter"
+import requestAddDescription from "./request-add-description"
+import requestAddAttach from "./request-add-attach"
 
 export default {
   name: "RequestAddForm",
@@ -49,15 +60,41 @@ export default {
     }
   },
   components: {
-    requestAdd1,
-    requestAdd2,
-    requestAdd3,
-    requestAdd4,
+    requestAddGeneral,
+    requestAddSubmitter,
+    requestAddDescription,
+    requestAddAttach,
     Formtab
-  }
+  },
+  methods: {
+    currentTab() {return this.$store.getters.getRequestAddFormTab },
+    stateGeneralValidation() {return this.$store.getters.getRequestAddFormGeneralValCount },
+    validGeneral() { return this.stateGeneralValidation() === 3 ? true : false },
+    isGeneral() { return this.currentTab() === "General" ? true : false },
+    isSubmitter() { return this.currentTab() === "Submitter" ? true : false },
+    isDescription() { return this.currentTab() === "Description" ? true : false },
+    isAttach() { return this.currentTab() === "Attach" ? true : false },
+
+    currentSubForm() {
+      switch (this.currentTab()) {
+        case "General":
+          return "requestAddGeneral"
+        case "Submitter":
+          return "requestAddSubmitter"
+        case "Description":
+          return "requestAddDescription"
+        case "Attach":
+          return "requestAddAttach"
+        default:
+          return "requestAddGeneral"
+      }
+    }
+  },
 }
 </script>
 
 <style>
-
+.cMouse.text-primary :hover {
+  cursor: pointer;
+}
 </style>

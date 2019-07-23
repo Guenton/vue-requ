@@ -6,10 +6,18 @@ const getters = {
     return state.jwt
   },
   getRequestAddFormTab: state => {
-    return state.request.addFormTab
+    return state.request.addForm.tab
   },
   getRequestAddFormStep: state => {
-    return state.request.addFormStep
+    let reducer = (previousValue, currentValue) => previousValue + currentValue
+    let step = state.request.addform.valCount.reduce(reducer)
+    return step
+  },
+  getRequestAddFormGeneralValCount: state => {
+    return state.request.addForm.valCount.general
+  },
+  getRequestAddFormSubmitterValCount: state => {
+    return state.request.addForm.valCount.submitter
   }
 }
 

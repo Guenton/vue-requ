@@ -9,9 +9,12 @@ const getters = {
     return state.request.addForm.tab
   },
   getRequestAddFormStep: state => {
-    let reducer = (previousValue, currentValue) => previousValue + currentValue
-    let step = state.request.addform.valCount.reduce(reducer)
-    return step
+    let steps = 
+      state.request.addForm.valCount.general +
+      state.request.addForm.valCount.submitter +
+      state.request.addForm.valCount.description +
+      state.request.addForm.valCount.attach
+    return steps
   },
   getRequestAddFormGeneralValCount: state => {
     return state.request.addForm.valCount.general

@@ -109,29 +109,37 @@ export default {
     firstNameValidator() {
       if (this.form.firstName.length >= 2) {
         this.validation.firstName = true
+        this.valStore()
       } else {
         this.validation.firstName = false
+        this.valStore()
       }
     },
     lastNameValidator() {
       if (this.form.lastName.length >= 2) {
         this.validation.lastName = true
+        this.valStore()
       } else {
         this.validation.lastName = false
+        this.valStore()
       }
     },
     emailValidator() {
       if (this.emailRegex.test(this.form.email)) {
         this.validation.email = true
+        this.valStore()
       } else {
         this.validation.email = false
+        this.valStore()
       }
     },
     departmentValidator() {
       if (this.form.department.length >= 3) {
         this.validation.department = true
+        this.valStore()
       } else {
         this.validation.department = false
+        this.valStore()
       }
     },
     validFeedback() {

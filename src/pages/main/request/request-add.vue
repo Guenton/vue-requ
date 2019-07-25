@@ -6,7 +6,7 @@
     <b-container>
       <b-row class="whiteshade rounded shadow py-1 my-3">
         <b-col>
-          <StepProgress :totalStep=progress.totalStep :currentStep=progress.currentStep />
+          <StepProgress :totalStep=progress.totalStep :currentStep="progressStep" />
         </b-col>
       </b-row>
       <b-row>
@@ -32,7 +32,7 @@ export default {
         text: "Submit new Request",
       },
       progress: {
-        totalStep: 4,
+        totalStep: 9,
         currentStep: 1
       }
     }
@@ -42,6 +42,11 @@ export default {
     RequestAddForm,
     StepProgress
   },
+  computed: {
+    progressStep() {
+      return this.$store.getters.getRequestAddFormStep
+    }
+  }
 }
 </script>
 

@@ -5,17 +5,17 @@
 </template>
 
 <script>
-// import sessionRedirectHandler from "./components/js/session-isAuth";
+import sessionRedirectHandler from "./components/js/session-isAuth";
 
 export default {
   name: "core",
-  // created() {
-  //   if (sessionRedirectHandler()) {
-  //     this.$router.push("/main");
-  //   } else {
-  //     this.$router.push("/login");
-  //   }
-  // },
+  created() {
+    if (sessionRedirectHandler()) {
+      this.$router.push("/main");
+    } else {
+      this.$router.push("/login");
+    }
+  },
 }
 </script>
 

@@ -1,11 +1,11 @@
 <template>
   <b-container class="login-container">
-    <b-form @submit="onEnteryKeySubmit">
+    <b-form @submit="onEnterKeySubmit()">
       <loginFormImg />
-      <login-form-username :username="form.username" @typedUsername="receiveUsername($event)" />
-      <login-form-password :password="form.password" @typedPassword="receivePassword($event)" />
+      <login-form-username :username="form.username" @typedUsername="receiveUsername($event)" @keyup.enter="onEnterKeySubmit()" />
+      <login-form-password :password="form.password" @typedPassword="receivePassword($event)" @keyup.enter="onEnterKeySubmit()" />
       <login-form-error :warningMsg="warningMsg" :errorMsg="errorMsg" />
-      <login-form-submit-button @submitted="onMouseClickSubmit"/>
+      <login-form-submit-button @submitted="onMouseClickSubmit()"/>
     </b-form>
   </b-container>
 </template>
@@ -46,7 +46,7 @@
       receivePassword(text) {
         this.form.password = text;
       },
-      onEnteryKeySubmit(evt) {
+      onEnterKeySubmit(evt) {
         evt.preventDefault()
         this.onMouseClickSubmit()
       },

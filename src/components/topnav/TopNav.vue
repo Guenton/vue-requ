@@ -1,6 +1,5 @@
 <template>
-  <div class="shadow">
-    <b-navbar toggleable="lg" type="light" variant="light">
+    <b-navbar toggleable="lg" type="light" variant="light" sticky class="shadow">
       <b-navbar-brand><router-link to="/main/home"><font-awesome-icon icon="home" size="lg"/></router-link></b-navbar-brand>
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -17,10 +16,8 @@
         </transition>
         <!-- TopNav Right Side Elements -->
         <topnavRight />
-      </b-collapse>     
-
+      </b-collapse>
     </b-navbar>
-  </div>
 </template>
 
 <script>
